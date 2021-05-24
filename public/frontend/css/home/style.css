@@ -1,0 +1,313 @@
+
+:root {
+  --primary-color: #302AE6;
+  --secondary-color: #536390;
+  --font-color: #424242;
+  --footer-color: #202225;
+  --bg-color: #fff;
+  --bg-color2: #d9d9db;
+  --heading-color: #292922;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --font-color: #ffffff;
+  --footer-color: #202225;
+  --bg-color: #071D2B;
+  --bg-color2: #0A2E46;
+  --heading-color: #818cab;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--bg-color);
+}
+
+article {
+  float: left;
+  width: 70%;
+  height: auto;
+}
+
+.pcontainer {
+  padding: 0px 250px 0px 250px;
+  
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  height: auto;
+  padding: 10px;
+}
+
+.column-33 {
+  float: left;
+  width: 40%;
+  height: auto;
+  padding: 10px 0px 0px 10px;
+}
+
+.large-font {
+  color: var(--font-color);
+  margin-top: 0px;
+  font-size: 60px;
+}
+
+.xlarge-font {
+  color: var(--font-color);
+  margin-bottom: 10px;
+  font-size: 80px;
+}
+
+.small-font{
+  color: var(--font-color);
+}
+
+.post {
+  color: var(--font-color);
+  overflow: hidden;
+  margin: 20px;
+  padding: 30px 20px 30px 20px;
+  border-radius: 15px;
+  background-color: var(--bg-color2);
+  height: auto;
+  -webkit-box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+  -moz-box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+  box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+}
+
+
+.post p {
+  text-overflow: ellipsis;
+}
+.post h2 {
+  margin-bottom: 0;
+  padding-bottom: 2;
+}
+.post h6 {
+  margin-top: 0;
+  padding-top: 0;
+  font-weight: 100;
+}
+.post img {
+  float: left;
+  border-radius: 25px;
+}
+
+.pagenumber {
+  text-align: center;
+  height: 300px;
+  width: 100%;
+}
+
+.pagination {
+
+  display: inline-block;
+}
+
+.pagination a {
+  background-color: #242430;
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: #4caf50;
+  color: white;
+  border: 1px solid #4caf50;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.navbox{
+  margin: 20px;
+  padding: 30px 10px 30px 10px;
+  border-radius: 15px;
+  background-color: var(--bg-color2);
+  height: auto;
+  -webkit-box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+  -moz-box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+  box-shadow: -2px 17px 72px -78px rgba(148,145,148,0.47);
+}
+
+.nav1 {
+  background-color: #202225;
+  overflow: hidden;
+
+}
+
+/* Style the links inside the navigation bar */
+.nav1 a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+nav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+nav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+.nav2 {
+  float: left;
+  width: 15%;
+  height: 1500px;
+  /* only for demonstration, should be removed */
+  overflow: hidden;
+
+}
+
+.nav3 {
+  float: right;
+  width: 15%;
+  height: 1500px;
+  /* only for demonstration, should be removed */
+
+  overflow: hidden;
+
+}
+
+.mySearch {
+
+  width: 150%;
+  font-size: 18px;
+  padding: 11px;
+  border: 1px solid #ddd;
+}
+
+/* Style the navigation menu */
+.myMenu {
+  
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navigation links */
+.myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: var(--font-color);
+  display: block;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.myMenu img{
+  float: left;
+  height: 10;
+  width: 10;
+}
+.myMenu li a:hover {
+  background-color: #eee;
+  color: #333;
+}
+
+/* Style the list inside the menu */
+nav ul {
+
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+
+  .nav1,
+  .nav2,
+  .nav3,
+  .f2,
+  article {
+      width: 100%;
+      height: auto;
+  }
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  
+
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

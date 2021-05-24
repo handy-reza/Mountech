@@ -1,0 +1,126 @@
+body{
+  background-color: var(--bg-color);
+}
+
+.container {
+  margin: 150px auto;
+  min-width: 500px;
+  width: 80%;
+  text-align: left;
+  color: var(--font-color);
+}
+
+form {
+  float: left;
+  outline: 0;
+  height: 50px;
+  width: 100%;
+}
+
+.listbox {
+  box-sizing: border-box;
+  margin: 10px 0px 0px 0px;
+  padding-top: 5px;
+  height: 50px;
+  width: 80%;
+  text-align: left;
+  color: var(--font-color);
+  background-color: var(--bg-color2);
+  float: left;
+  border-radius: 15px 0px 0px 15px;
+}
+
+li {
+  font-size: 20px;
+}
+
+
+input[type="text"] {
+  border-radius: 15px;
+  float: left;
+  outline: 0;
+  width: 75%;
+  height: 50px;
+  border: 3px solid #852424;
+  font-size: 18px;
+  font-weight: normal;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.add {
+  position: relative;
+  outline: 0;
+  float: right;
+  width: 20%;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: #1784dd;
+  border-radius: 15px;
+}
+
+
+ul {
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+hr {
+  border-bottom: 0;
+  margin-top: 30px;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+}
+
+.remove {
+  margin: 10px 0px 0px 0px;
+  box-sizing: border-box;
+  top: 100px;
+  float: right;
+  outline: 0;
+  float: right;
+  width: 20%;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #b42e2e;
+  border-radius: 0px 15px 15px 0px;
+}
+
+.clear {
+  float: right;
+  cursor: pointer;
+  outline: 0;
+  float: right;
+  width: 20%;
+  height: 50px;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-color: #b42e2e;
+  border-radius: 15px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.text {
+  margin-top: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--font-color);
+}
+
+.jarak{
+  font-size: 1px ; 
+}

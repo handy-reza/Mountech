@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\Authors_newsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,7 +29,7 @@ Route::get('/todo', function () {
 Route::get('/', function () {
     return view('index');
     })->name('dashboard.index');
-    Route::resource('news', AuthorsController::class);
     Route::resource('authors', NewsController::class);
-    Route::resource('authors_news', Authors_newsController::class);
+    Route::resource('news', AuthorController::class);
+    
 

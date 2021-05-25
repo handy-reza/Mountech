@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Models\Author;
 use App\Models\News;
+use Illuminate\Http\Request;
 
 class NewsController extends Controller
 {
@@ -14,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $suppliers = News::all();
+        $news = News::all();
         return view('news.index', compact('news'));
     }
 
@@ -25,7 +26,9 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        $authors = Author::all();
+        return view('news.create',compact('authors'));
+
     }
 
     /**
@@ -36,7 +39,10 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'title' => 'required|max:100']);
+        News::create($request->all());
+        return redirect()->route('news.index');
     }
 
     /**
@@ -58,7 +64,8 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = News::findOrFail($id);
+        return view('news.edit', compact('news'));
     }
 
     /**
@@ -70,7 +77,17 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+        'title' => 'required|max:100',
+        'content' => 'required|max:255'
+        ]);
+        News::findOrFail($id)->update([
+        'title' => $request->title,
+        'picture' => $request->picture,
+        'content' => $request->content,
+        'is_published' => $request->is_published,
+        ]);
+        return redirect()->route('news.index');
     }
 
     /**
@@ -81,6 +98,7 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }

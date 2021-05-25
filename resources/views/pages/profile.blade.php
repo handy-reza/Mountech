@@ -1,4 +1,5 @@
 @extends('layouts.frontend.master')
+@section('title', 'profile')
 @section('content')
 
 <article>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home</title>
+    <title>@yield('title')</title>
     <meta charset="utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +37,7 @@
     <section>
         
         <nav class="nav1">
-            <a href="http://127.0.0.1:8000/">Home</a>
+            <a href="http://127.0.0.1:8000/home">Home</a>
             <a href="http://127.0.0.1:8000/profile">Profile</a>
             <a href="http://127.0.0.1:8000/todo?">List App</a>
         </nav>

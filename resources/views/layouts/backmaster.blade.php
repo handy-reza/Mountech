@@ -83,32 +83,6 @@
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                        <!-- Add icons to the links using the .nav-icon class
-with font-awesome or any other icon font library -->
-                        <li class="nav-item">
-                            <a href="{{route('dashboard.index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Dashboard
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('news.index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-box-open"></i>
-                                <p>
-                                    News
-                                </p>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="{{route('authors.index')}}" class="nav-link">
-                                <i class="nav-icon fas fa-shopping-basket"></i>
-                                <p>
-                                    Author
-                                </p>
-                            </a>
-                        </li>
                         <li class="nav-item">
                             <a href="{{ route('dashboard.index') }}" class="nav-link
 {{Request::is('/') ? 'active' : ''}}">
@@ -123,7 +97,7 @@ with font-awesome or any other icon font library -->
 {{Request::is('*news*') ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-box-open"></i>
                                 <p>
-                                    News
+                                    Author
                                 </p>
                             </a>
                         </li>
@@ -132,7 +106,7 @@ with font-awesome or any other icon font library -->
 {{Request::is('*authors*') ? 'active' : ''}}">
                                 <i class="nav-icon fas fa-shopping-basket"></i>
                                 <p>
-                                    Author
+                                    News
                                 </p>
                             </a>
                         </li>

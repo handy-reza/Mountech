@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Author;
+use App\Models\News;
 use Illuminate\Http\Request;
-use App\Models\Authors;
 
-class AuthorsController extends Controller
+class AuthorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,7 @@ class AuthorsController extends Controller
      */
     public function index()
     {
-        $suppliers = Authors::all();
+        $authors = Author::all();
         return view('authors.index', compact('authors'));
     }
 
@@ -25,7 +26,7 @@ class AuthorsController extends Controller
      */
     public function create()
     {
-        //
+        return view('authors.create');
     }
 
     /**
@@ -36,7 +37,10 @@ class AuthorsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+        'name' => 'required|max:100']);
+        Author::create($request->all());
+        return redirect()->route('authors.index');
     }
 
     /**
@@ -58,7 +62,8 @@ class AuthorsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $author = Author::findOrFail($id);
+        return view('authors.edit', compact('author'));
     }
 
     /**
@@ -70,7 +75,16 @@ class AuthorsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+        'name' => 'required|max:100',
+        'address' => 'required|max:255'
+        ]);
+        Author::findOrFail($id)->update([
+        'name' => $request->name,
+        'picture' => $request->picture,
+        'address' => $request->address,
+        ]);
+        return redirect()->route('authors.index');
     }
 
     /**
@@ -81,6 +95,7 @@ class AuthorsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Author::findOrFail($id)->delete();
+        return redirect()->back();
     }
 }

@@ -34,10 +34,9 @@
       </div>
     </div>
     <nav class="nav1">
-      <a href="../index.php">Home</a>
-      <a href="index.php">Profile</a>
-      <a class="active"href="todo3.php">List App</a>
-    </nav>
+      <a href="http://127.0.0.1:8000/home">Home</a>
+      <a href="http://127.0.0.1:8000/profile">Profile</a>
+      <a href="http://127.0.0.1:8000/todo?">List App</ </nav>
   </header>
 
   <div class="box">
@@ -56,7 +55,7 @@
       <ul id="list-items"></ul>
 
       <div>
-        <h1 class="jarak" >.</h1>
+        <h1 class="jarak">.</h1>
         <hr>
         <div style="float: left; width: 15%; font-size: 20px; margin-top: 35px; ">Kamu memiliki : </div>
         <div style="float: left; width: 2%; font-size: 20px; margin-top: 35px; " class="list-count"> 0 </div>
